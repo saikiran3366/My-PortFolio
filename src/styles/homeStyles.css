@@ -1,44 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rowdies:wght@400;700&display=swap');
 
-
 .mainDiv{
     height:900px;
     width:100%;
     background-color: white;
 }
-
 .nav{
     height:60px;
     width:100%;
     background-color: green;
-    justify-content: center;
-    align-items: center;
+    position:fixed;
+    justify-content: flex-end;
     display:flex;
     flex-direction: row;
 }
-
 .navHeadings{
     margin:0px;
 
 }
-
-.leftNav{
-    background-color: white;
-    width:50%;
-    height:100%
-}
-
 .rightNav{
-    background-color: white;
+    background-color: red;
     width:50%;
-    height:100%;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-
 .nameSection{
     height:700px;
     width:100%;
@@ -48,22 +36,17 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    
 }
-
 .nameFont{
     font-family: 'Rowdies', cursive;
     font-size: 300%;
     margin: 0;
 }
-
 .welcomeText{
     font-family: 'Orbitron', sans-serif;
     font-size: 140%;
     margin:0;
-
 }
-
 .myProjectSection{
     background-color: white;
     height:900px;
@@ -78,18 +61,41 @@
     font-family: "Rowdies",cursive;
     font-size: 300%;
 }
-
 .card{
     height:300px;
     width:300px;
     background-color: #f6f6f6;
     border-radius: 10px;
     margin-top: 20px;
-
 }
 .card:hover{
     background:linear-gradient(#e53935,#e35d5b);
     transform: translateY(-8px);
     transition: transform ease 800ms;
     color:white;
+}
+
+.hireMe{
+    display:flex;
+    flex-direction: row;
+}
+.hireMeSec{
+    height: 900px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    width:50%
+}
+.hireText{
+    font-family: 'Rowdies', cursive;
+    font-size: 300%;
+    margin: 0;
+}
+.hireMeSecRight{
+    height: 900px;
+    background-color: green;
+    display: flex;
+    /* align-items: center */
+    justify-content: center;
+    width:50%
 }

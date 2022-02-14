@@ -1,16 +1,15 @@
 import React from 'react';
-import '../styles/homeStyles.css'
-import EmployImg from '../assets/employ.png'
-import Img1 from '../assets/todo.png'
-import Img2 from '../assets/registration.png'
-import Img3 from '../assets/calculator.png'
-import Img4 from '../assets/search.jpg'
-import {Link} from 'react-router-dom'
+import '../styles/homeStyles.css';
+import EmployImg from '../assets/employ.png';
+import Img1 from '../assets/todo.png';
+import Img2 from '../assets/registration.png';
+import Img3 from '../assets/calculator.png';
+import Img4 from '../assets/search.jpg';
+import {Link} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
 
 const Home = () =>{
-
     const history = useHistory();
 
     const data=[
@@ -81,20 +80,16 @@ const Home = () =>{
         case 3 :
         history.push("/Movies");
         break;
-
     }
 }
-
     return(
         <div className="mainDiv">
             <div className="nav"> 
-                <div className="leftNav">
-                </div>
                 <div className="rightNav">
-                <h2 className="navHeadings">Home</h2>
-                <h2 className="navHeadings">Service</h2>
-                <h2 className="navHeadings">About</h2>
-                <h2 className="navHeadings">Contact</h2>
+                    <h2 className="navHeadings">Home</h2>
+                    <h2 className="navHeadings">Projects</h2>
+                    <h2 className="navHeadings">Hire Me</h2>
+                    <h2 className="navHeadings">Contact</h2>
                 </div>
             </div>
             <div className="nameSection">
@@ -110,12 +105,17 @@ const Home = () =>{
 
             <div>
                 <div className="myProjectSection">
-                <h1 style={{margin:0}}className="projectText">My Latest Projects</h1>
-                <p style={{margin:10}}>loremepsom loremepsom loremepsom loremepsom loremepsom loremepsom loremepsom loremepsom</p>
-                <p style={{margin:5}}>loremepsom loremepsom loremepsom loremepsom</p>
-                
+                    <h1 style={{margin:0}}className="projectText">
+                        My Latest Projects
+                    </h1>
+                    <p style={{margin:10}}>
+                        loremepsom loremepsom loremepsom loremepsom loremepsom loremepsom loremepsom loremepsom
+                    </p>
+                    <p style={{margin:5}}>
+                        loremepsom loremepsom loremepsom loremepsom
+                    </p>
                 <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around',width:'55%',marginTop:40,flexWrap:'wrap'}}>
-                {data.map((item)=>{
+                    {data.map((item)=>{
                     return(
                         <div onClick={()=>handleLink(item.id)} className="card" style={{marginTop:40,alignItems:'center',display:'flex',flexDirection:'column',cursor:'pointer'}}>
                             <h2>{item.ProjectName}</h2>
@@ -124,9 +124,20 @@ const Home = () =>{
                             <img height={100} width={100} style={{marginTop:30}} src={item.Image}></img>
                         </div>
                     )
-                })}
+                    })}
                 </div>
-
+                </div>
+            </div>
+            <div className='hireMe'>
+                <div className="hireMeSec">
+                    <div>
+                        <h1 className='hireText'>Hire Me</h1>
+                        <p>I am Available for freelance work connect with me via phone: <br/><span style={{fontWeight:'bold',margin:0}}> 9032238487 </span> or email:<span style={{fontWeight:'bold',margin:0}}> saikiranmaredu@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+                <div className="hireMeSecRight">
+                    <h1>judhjw</h1>
                 </div>
             </div>
         </div>
