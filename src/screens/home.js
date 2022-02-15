@@ -34,7 +34,6 @@ const Home = () =>{
         setSubject ("")
         setMessage ("")
     }
-
     const sym = "</>"
     const and = "&"
 
@@ -109,16 +108,32 @@ const Home = () =>{
     }
 }
     return(
-        <div className="mainDiv">
+        <div className="mainDiv" >
             <div className="nav"> 
                 <div className="rightNav">
-                    <h3 className="navHeadings">Home</h3>
-                    <h3 className="navHeadings">Projects</h3>
-                    <h3 className="navHeadings">Skills</h3>
-                    <h3 className="navHeadings">Hire Me</h3>
+                    <a href="#Home" style={{textDecoration:'none'}}>
+                        <h3 className="navHeadings">
+                            Home
+                        </h3>
+                    </a>
+                    <a href="#myProjects" style={{textDecoration:'none'}}>
+                        <h3 className="navHeadings">
+                            Projects
+                        </h3>
+                    </a>
+                    <a href="#mySkills" style={{textDecoration:'none'}}>
+                        <h3 className="navHeadings">
+                            Skills
+                        </h3>
+                    </a>
+                    <a href="#hireMe" style={{textDecoration:'none'}}>
+                        <h3 className="navHeadings">
+                            Hire Me
+                        </h3>
+                    </a>
                 </div>
             </div>
-            <div className="nameSection">
+            <div className="nameSection" id="Home">
                 <img src={EmployImg} width="300" height="300" style={{paddingRight:100}}></img>
                 <div>
                 <p className="welcomeText">WELCOME  TO  MY  WORLD</p>
@@ -129,8 +144,8 @@ const Home = () =>{
                 </div>
             </div>
 
-            <div>
-                <div className="myProjectSection">
+            <div id="myProjects">
+                <div className="myProjectSection" >
                     <h1 style={{margin:0}}className="projectText">
                         My Latest Projects
                     </h1>
@@ -155,7 +170,7 @@ const Home = () =>{
                 </div>
             </div>
 
-            <div style={{height:750,backgroundColor:'black',display:'flex',flexDirection:'column',alignItems:'center'}}>
+            <div id="mySkills"style={{height:750,backgroundColor:'black',display:'flex',flexDirection:'column',alignItems:'center'}}>
                <FontAwesomeIcon icon={faMicrochip} size='2x' style={{color:'white',marginTop:40}}></FontAwesomeIcon>
                    <h1 style={{color:'white'}}>
                        Skills {and} Technologies
@@ -198,13 +213,10 @@ const Home = () =>{
                             <h4 style={{color:'white',paddingLeft:5}}>GitHub</h4>
                         </div>
                         </div>
-
-                        
-
                     </div>
                </div>
 
-                <div className='hireMe'>
+                <div className='hireMe' id="hireMe">
                     <div className="hireMeSec">
                         <div>
                             <h1 className='hireText'>Hire Me.</h1>
@@ -219,7 +231,6 @@ const Home = () =>{
                                 size="small" 
                                 placeholder="Your Name*" 
                                 />
-
                                 <TextField 
                                 value={email}
                                 onChange={(e)=>setEmail(e.target.value)}
@@ -228,7 +239,6 @@ const Home = () =>{
                                 size="small" 
                                 placeholder="Your email*" 
                                 />
-
                                 <TextField 
                                 value={subject}
                                 onChange={(e)=>setSubject(e.target.value)}
@@ -237,7 +247,6 @@ const Home = () =>{
                                 size="small" 
                                 placeholder="write a subject*" 
                                 />
-
                                 <TextField 
                                 value={message}
                                 onChange={(e)=>setMessage(e.target.value)}
@@ -248,7 +257,6 @@ const Home = () =>{
                                 rows={5}
                                 placeholder="Your Message" 
                                 />
-
                                 {email==""||name=="" 
                                 ? 
                                 <Button variant="disabled" onClick={handleSubmit} style={{textDecoration: 'none',marginTop:30,width:100,background:'#e35d5b',margin:0}}>
@@ -267,7 +275,6 @@ const Home = () =>{
                         <img src={HireImg} height='500' width='500' ></img>
                     </div>
                 </div>
-
                 <div className='bottomNav'>
                     <h2 style={{color:'grey'}}>
                         Sai Kiran
