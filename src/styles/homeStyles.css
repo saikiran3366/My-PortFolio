@@ -9,18 +9,59 @@
 .nav{
     height:60px;
     width:100%;
-    background-color: green;
+    background-color: #f6f6f6;
     position:fixed;
     justify-content: flex-end;
     display:flex;
     flex-direction: row;
 }
-.navHeadings{
+/* .navHeadings{
+    display: inline-block;
     margin:0px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 1s;
+    /* text-decoration: none;  */ */
 
+/* .navHeadings:hover{
+    color: #e53935;
+    border-bottom: 2px solid #e53935;
+    display: block;
+} */
+
+.navHeadings {
+    display: inline-block;
+    color: #e53935;
+    text-decoration: none;
+    cursor: pointer;
 }
+
+.navHeadings:hover {
+    color:#e53935;
+    cursor:pointer;
+}
+
+.navHeadings::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e53935;
+    transition: width .3s;
+    color: #e53935;
+    cursor: pointer;
+}
+
+.navHeadings:hover::after {
+    width: 100%;
+    transition: width .3s;
+    color: #e53935;
+    
+    
+}
+
 .rightNav{
-    background-color: red;
+    background-color: #f6f6f6;
     width:50%;
     display:flex;
     flex-direction: row;
@@ -78,17 +119,22 @@
 .hireMe{
     display:flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 }
 .hireMeSec{
     height: 900px;
-    background-color: red;
+    background-color: white;
     display: flex;
     justify-content: center;
-    width:50%
+    width:40%;
+    align-items:center;
+    /* padding-left: 200px; */
 }
 .hireText{
     font-family: 'Rowdies', cursive;
-    font-size: 300%;
+    font-size: 320%;
     margin: 0;
 }
 .hireMeSecRight{
@@ -97,5 +143,44 @@
     display: flex;
     /* align-items: center */
     justify-content: center;
-    width:50%
+    /* width:50% */
+}
+.textFields{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 400px;
+    width:480px;
+    /* background-color: red; */
+    justify-content: space-around;
+}
+
+.descText{
+    line-height: 25px;
+}
+.bottomNav{
+    height:70px;
+    background-color: black;
+    width:100%;
+    align-items: center;
+    display:flex;
+    justify-content: space-around;
+}
+
+.linked{
+    width:50px;
+    height:50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+}
+
+.linked:hover{
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    cursor: pointer;
 }
