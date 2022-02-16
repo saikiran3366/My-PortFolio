@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import Button from '@mui/material/Button';
-import MoviesData from '../components/searchData'
-import gameOfThrones from '../assets/gameOfThrones.jpg'
-import TextField from '@mui/material/TextField'
-import MoviesModal from '../components/searchModal'
+import MoviesData from '../components/searchData';
+import gameOfThrones from '../assets/gameOfThrones.jpg';
+import TextField from '@mui/material/TextField';
+import MoviesModal from '../components/searchModal';
 
 
 const Movies = () =>{
@@ -32,7 +32,7 @@ const Movies = () =>{
 
     return(
         <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-                <h1 >
+                <h1>
                     Search Your Favourite Dessert
                 </h1>
                <div style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
@@ -52,7 +52,7 @@ const Movies = () =>{
 
                
 
-                <div  style={{display:'flex',flexDirection:'row',justifyContent:'space-around',width:'80%',flexWrap:'wrap'}}>
+                <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around',width:'80%',flexWrap:'wrap'}}>
                     {searchData.length == 0 
                     ?
                     <h1>No data for your search</h1>
@@ -60,7 +60,7 @@ const Movies = () =>{
                     <> 
                     {searchData.map((item)=>{
                         return(
-                            <div   style={{display:'flex',flexDirection:'column'}}>
+                            <div style={{display:'flex',flexDirection:'column'}}>
                             <img onClick ={()=>show(item)} style={{height:200,width:350,marginTop:40,cursor:'pointer'}}src={item.Poster}></img>
                             <h4 style={{margin:0}}>{item.Title}</h4>
                             <h5 style={{margin:0}}>{item.Price}</h5>

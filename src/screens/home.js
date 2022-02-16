@@ -7,6 +7,7 @@ import Img1 from '../assets/todo.png';
 import Img2 from '../assets/registration.png';
 import Img3 from '../assets/calculator.png';
 import Img4 from '../assets/search.jpg';
+import Img5 from '../assets/covidImg.jpg'
 import HireImg from '../assets/hireMe.jpg'
 import {TextField,Button} from '@mui/material'
 import { useHistory } from "react-router-dom";
@@ -68,8 +69,9 @@ const Home = () =>{
         },
         {   
             id:4,
-            ProjectName:'In Progress',
+            ProjectName:'Covid App',
             Description:'lorem epsum lorem epsum',
+            Image:Img5
         },
         {   
             id:5,
@@ -104,6 +106,9 @@ const Home = () =>{
         break;
         case 3 :
         history.push("/Movies");
+        break;
+        case 4 :
+        history.push("/Covid");
         break;
     }
 }
@@ -195,7 +200,7 @@ const Home = () =>{
                         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around',paddingTop:30}}>
                         <div style={{height:50,width:400,backgroundColor:'grey',display:'flex',alignItems:'center'}}>
                             <FcApproval size={25}  style={{paddingLeft:20}}/>
-                            <h4 style={{color:'white',paddingLeft:5}}>Bootstrap</h4>
+                            <h4 style={{color:'white',paddingLeft:5}}>Material Ui</h4>
                         </div>
                         <div style={{height:50,width:400,backgroundColor:'grey',display:'flex',alignItems:'center'}}>
                             <FcApproval size={25} style={{paddingLeft:20}} />
@@ -292,6 +297,7 @@ const Home = () =>{
                     </div>
                 </div>
         </div>
+       
     )
 }
 export default Home;
